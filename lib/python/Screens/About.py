@@ -151,11 +151,11 @@ class About(Screen):
 				line = line.strip()
 				freeflash += line
 				return str(freeflash)
-		self["lab1"] = StaticText(_("OpenDroid by OPD Image Team"))
-		self["lab2"] = StaticText(_("Support at") + " www.droidsat.org")
+		self["lab1"] = StaticText(_("OpenDroid"))
+		self["lab2"] = StaticText(_("Unofficial") + " vuplus-images.co.uk")
 		model = None
 		AboutText = ""
-		self["lab2"] = StaticText(_("Support:") + " www.droidsat.org")
+		self[""] = StaticText(_("Unofficial Build") + " vuplus-images.co.uk")
 		AboutText += _("Model:\t%s %s\n") % (getMachineBrand(), getMachineName())
 
 		if path.exists('/proc/stb/info/chipset'):
@@ -858,7 +858,7 @@ class SystemMemoryInfo(Screen):
 		Screen.setTitle(self, _("Memory Information"))
 		self.skinName = ["SystemMemoryInfo", "About"]
 		self["lab1"] = StaticText(_("OpenDroid"))
-		self["lab2"] = StaticText(_("By OPD Image Team"))
+		self["lab2"] = StaticText(_("Unofficial Build"))
 		self["AboutScrollLabel"] = ScrollLabel()
 
 		self["actions"] = ActionMap(["SetupActions", "ColorActions"],
